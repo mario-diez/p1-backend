@@ -5,6 +5,9 @@ import { configSchemaValidation } from './schemas/config.schema';
 import { UsersController } from './users/users.controller';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { QrsController } from './qrs/qrs.controller';
+import { QrsService } from './qrs/qrs.service';
+import { QrsModule } from './qrs/qrs.module';
 
 
 @Module({
@@ -20,7 +23,8 @@ import { AuthModule } from './auth/auth.module';
     validationSchema: configSchemaValidation,
   }),
   UsersModule,
-  AuthModule
+  AuthModule,
+  QrsModule
   ],
   controllers: [],
   providers: [ConfigService],
