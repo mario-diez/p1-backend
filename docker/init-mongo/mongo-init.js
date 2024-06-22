@@ -16,8 +16,8 @@ db.users.insertMany([
     {
         "name": "admin",
         "email": "admin",
-        "role": "admin",
-        "password": "admin"
+        "role": "ADMIN",
+        "password": "$2a$10$DwXUf.kvGUtfu5c3kFTHfOfPdLoDXtyuu/VfJxGVTm9iO3ndaMJ3C"
     },
   ]);
 
