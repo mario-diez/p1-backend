@@ -25,7 +25,15 @@ export class QrsController {
     @UseGuards(JwtAuthGuard, RolesGuard)
     @Roles(ROLE.Admin)
     async findAll() {
-        return this.qrService.findAll();
+        // return this.qrService.findAll();
+        const qrs = await this.qrService.findAll();
+        return qrs.map(qr => {
+            return {
+                id: qr.id,
+                qrCodeDataURL: qr.qrCodeDataURL,
+                user: qr.text,
+            };
+        });
     }
 
     @Get(':id')
@@ -37,7 +45,6 @@ export class QrsController {
             res.setHeader('Content-Type', 'text/html');
             res.send(`
             <div>
-                <h1>QR Code for "${qr.URL}"</h1>
                 <img src="${qr.qrCodeDataURL}" alt="QR Code">
             </div>
             `);

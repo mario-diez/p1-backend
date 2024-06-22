@@ -19,7 +19,20 @@ db.users.insertMany([
         "role": "ADMIN",
         "password": "$2a$10$DwXUf.kvGUtfu5c3kFTHfOfPdLoDXtyuu/VfJxGVTm9iO3ndaMJ3C"
     },
-  ]);
+    {
+        "name": "user",
+        "email": "user",
+        "role": "USER",
+        "password": "$2a$10$DwXUf.kvGUtfu5c3kFTHfOfPdLoDXtyuu/VfJxGVTm9iO3ndaMJ3C"
+
+    },
+    {
+        "name": "user2",
+        "email": "user2",
+        "role": "GUEST",
+        "password": "$2a$10$DwXUf.kvGUtfu5c3kFTHfOfPdLoDXtyuu/VfJxGVTm9iO3ndaMJ3C"
+    }
+  ]);    
 
 
 // Confirmar que la colección y los documentos fueron creados
