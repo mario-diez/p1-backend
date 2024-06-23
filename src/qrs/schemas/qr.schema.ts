@@ -12,6 +12,9 @@ export class QR {
   @Prop({ required: true })
   URL: string;
 
+  @Prop({ required: true })
+  ownerId: string;
+
   @Prop({ default: Date.now })
   createdAt: Date;
 }

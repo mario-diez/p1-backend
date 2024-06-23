@@ -3,6 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { QR, QRSchema } from './schemas/qr.schema';
 import { QrsController } from './qrs.controller';
 import { QrsService } from './qrs.service';
+import { User, UserSchema } from 'src/users/schemas/user.schema';
 
 @Module({
     imports: [
@@ -10,6 +11,10 @@ import { QrsService } from './qrs.service';
         {
         name: QR.name,
         schema: QRSchema,
+        },
+        {
+        name: User.name,
+        schema: UserSchema,
         }
       ])],
     controllers: [QrsController],
